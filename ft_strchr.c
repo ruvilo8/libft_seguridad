@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 12:57:46 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/17 14:55:15 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:59:36 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ char	*ft_strchr(const char *str, int c)
 	}
 	return ((char *)str);
 }
+
 /*#include <string.h>
 #include <stdio.h>
 int main(void)

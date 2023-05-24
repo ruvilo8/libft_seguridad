@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 13:50:44 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/21 18:28:15 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:29:04 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ char	**ft_split(const char *s, char c)
 		else
 			++s;
 	}
-	toke[i] = '\0';
+	toke[i] = NULL;
 	return (toke);
 }
 /*

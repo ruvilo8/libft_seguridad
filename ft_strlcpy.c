@@ -6,12 +6,11 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 22:31:08 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/16 16:00:13 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/24 12:26:47 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <bsd/unistd.h>
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
