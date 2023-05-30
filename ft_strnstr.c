@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 12:32:59 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/04/17 13:26:50 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:33:46 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,3 @@ static int	check_subs(const char *haystack, const char *needle, size_t len)
 		return (0);
 	return (1);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int main(void)
-{
-    char    *s1 = "Hola mi amor";
-    char    *s2 = "Hola";
-    char    *result = ft_strnstr(s1, s2, 4);
-    if (result != NULL)
-        printf("La subcadena fue encontrada por ft_strnstr.\n");
-    else
-        printf("La subcadena no fue encontrada por ft_strnstr.\n");
-    return(0);
-}*/

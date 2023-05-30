@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/22 17:57:00 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/04/24 17:17:59 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:34:14 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	tab[count] = '\0';
 	return (tab);
 }
-/*
-#include <stdio.h>
-int	main()
-{
-    char *s = "Hola caracola!";
-    char *str;
-    str = ft_substr(s, 5, 8);
-    printf("Subcadena extraída: %s\n", str);
-    free(str);
-    return (0);
-}*/

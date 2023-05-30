@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 22:39:31 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/24 12:53:40 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:30:35 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,3 @@ char	*ft_itoa(int n)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main(void)
-{
-	printf("The resul of ft_itoa for 0 is: %s\n", ft_itoa(0));
-    printf("The result of ft_itoa for 123456 is: %s\n", ft_itoa(123456));
-    printf("The result of ft_itoa for -123456 is: %s\n", ft_itoa(-123456));
-    printf("The result of ft_itoa for -2147483648 is: %s\n",
-	 ft_itoa(-2147483648));
-}*/

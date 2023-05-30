@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 10:25:50 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/19 22:45:31 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:32:49 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,13 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s[i] = '\0';
 	return (s);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int    main(void)
-{
-    char    str1 [] = "Canta, canta ";
-    char    str2 [] = "la rana de agua";
-    printf("The result of the ft_strjoin is: %s", ft_strjoin(str1, str2));
-    return(0);
-}*/

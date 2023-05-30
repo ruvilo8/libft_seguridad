@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/28 17:29:16 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/19 20:09:05 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:29:06 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ int	ft_atoi(const char *str)
 	}
 	return (number * sign);
 }
-/*
-# include <stdio.h>
-# include <ctype.h>
-int	main()
-{
-	char *str = "  -12345";
-	int number = ft_atoi(str);
-	printf("%d\n", number);
-	return 0;
-}*/

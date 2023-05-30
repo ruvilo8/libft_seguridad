@@ -6,74 +6,90 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 13:50:44 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/24 12:29:04 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:31:48 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
 
-static size_t	ft_toklen(const char *s, char c)
-{
-	size_t	num_token;
+#include "libft.h"
 
-	num_token = 0;
+static unsigned int	ft_num_toke(const char *s, char c)
+{
+	unsigned int	num_toke;
+
+	num_toke = 0;
 	while (*s)
 	{
 		if (*s != c)
 		{
-			++num_token;
+			++num_toke;
 			while (*s && *s != c)
 				++s;
 		}
 		else
 			++s;
 	}
-	return (num_token);
+	return (num_toke);
 }
 
-char	**ft_split(const char *s, char c)
+static char	**ft_liberar_espacio(char **tab)
 {
-	char	**toke;
-	size_t	i;
-	size_t	len;
+	unsigned int	i;
 
-	if (!s)
-		return (0);
 	i = 0;
-	toke = malloc(sizeof(char *) * (ft_toklen(s, c) + 1));
-	if (!toke)
-		return (0);
-	while (*s)
+	while (tab[i])
 	{
-		if (*s != c)
-		{
-			len = 0;
-			while (*s && *s != c && ++len)
-				++s;
-			toke[i++] = ft_substr(s - len, 0, len);
-		}
-		else
-			++s;
+		free (tab[i]);
+		i++;
 	}
-	toke[i] = NULL;
-	return (toke);
+	free (tab);
+	return (NULL);
 }
-/*
-# include<stdio.h>
-# include <string.h>
-int main(void)
+
+static void	ft_toke_len(char **next_toke, unsigned int *next_toke_len, char c)
 {
-    char *str = "Hola mundo, esto es una prueba";
-    char **tokens = ft_split(str, ' ');
+	unsigned int	i;
 
-    int i = 0;
-    while (tokens[i] != NULL) {
-        printf("Token %d: %s\n", i, tokens[i]);
-        free(tokens[i]);
-        i++;
-    }
-    free(tokens);
+	*next_toke += *next_toke_len;
+	*next_toke_len = 0;
+	i = 0;
+	while (**next_toke && **next_toke == c)
+		(*next_toke)++;
+	while ((*next_toke)[i])
+	{
+		if ((*next_toke)[i] == c)
+			return ;
+		(*next_toke_len)++;
+		i++;
+	}
+}
 
-    return (0);
-}*/
+char	**ft_split(char const *s, char c)
+{
+	char			**tab;
+	char			*next_toke;
+	unsigned int	next_toke_len;
+	unsigned int	num_toke;
+	unsigned int	i;
+
+	num_toke = ft_num_toke(s, c);
+	tab = (char **)malloc(sizeof(char *) * (num_toke + 1));
+	if (!(tab) || !(s))
+		return (NULL);
+	i = 0;
+	next_toke = (char *)s;
+	next_toke_len = 0;
+	while (i < num_toke)
+	{
+		ft_toke_len(&next_toke, &next_toke_len, c);
+		tab[i] = (char *)malloc(sizeof(char) * (next_toke_len + 1));
+		if (!(tab[i]))
+			return (ft_liberar_espacio(tab));
+		ft_strlcpy(tab[i], next_toke, next_toke_len + 1);
+		i++;
+	}
+	tab[i] = NULL;
+	return (tab);
+}

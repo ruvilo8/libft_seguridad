@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:13:46 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/22 17:13:48 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/05/30 16:32:21 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
-
-/*
-void	ft_sub_strmapi(unsigned int n, char* c)
-{
-	*c = *c + n;
-}
-
-int	main(void)
-{
-	char	str [] = "abcdefghijklmn";
-	char	*p;
-	p = ft_strdup(str);
-	ft_striteri(p, ft_sub_strmapi);
-	printf("The result of ft_striteri for abcdefghijklmn is: %s\n", p);
-	free(p);
-	return (0);
-}
-*/
