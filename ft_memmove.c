@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 21:01:10 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/30 16:31:11 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/02 11:06:48 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,24 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*d;
-	unsigned char	*s;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	d = (unsigned char *)dest + n;
-	s = (unsigned char *)src + n;
-	if (!src && !dest)
-		return (NULL);
+	if (!dest && !src)
+		return (0);
 	if (dest > src)
 	{
+		d = dest + n;
+		s = src + n;
 		while (n-- > 0)
-			*(--d) = *(--s);
-		return (d);
+			*--d = *--s;
 	}
 	else
-		ft_memcpy(dest, src, n);
+	{
+		d = dest;
+		s = src;
+		while (n-- > 0)
+			*d++ = *s++;
+	}
 	return (dest);
 }
