@@ -6,9 +6,11 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/22 17:13:46 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/30 16:32:21 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/05 16:10:41 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
