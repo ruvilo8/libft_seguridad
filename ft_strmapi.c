@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 23:43:36 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/06/06 19:26:29 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/06 19:31:12 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	if ((dst) == NULL)
 		return (NULL);
 	i = 0;
-	while (*(s + i))
+	while (i < len)
 	{
-		*(dst + i) = (*f)(i, *(s + i));
+		dst[i] = f(i, s[i]);
 		i++;
 	}
-	*(dst + i) = '\0';
+	dst[len] = '\0';
 	return (dst);
 }
