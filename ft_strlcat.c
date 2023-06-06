@@ -6,13 +6,11 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 22:57:38 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/30 16:33:02 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/06 12:25:10 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

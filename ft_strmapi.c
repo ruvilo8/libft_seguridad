@@ -6,7 +6,7 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 23:43:36 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/30 16:33:26 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/06 19:26:29 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	if (s == NULL)
 		return (NULL);
 	len = ft_strlen(s);
-	dst = ft_calloc(sizeof(char), (len + 1));
+	dst = (char *)malloc(sizeof(char) * (len + 1));
 	if ((dst) == NULL)
 		return (NULL);
 	i = 0;
