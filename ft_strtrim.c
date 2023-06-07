@@ -6,13 +6,11 @@
 /*   By: mruiz-vi <mruiz-vi@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:55:34 by mruiz-vi          #+#    #+#             */
-/*   Updated: 2023/05/30 16:34:05 by mruiz-vi         ###   ########.fr       */
+/*   Updated: 2023/06/07 13:31:52 by mruiz-vi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-char	*ft_strtrim(char const *s1, char const *set);
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
